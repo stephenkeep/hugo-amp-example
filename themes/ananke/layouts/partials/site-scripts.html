@@ -1,0 +1,4 @@
+{{ $script := .Site.Data.webpack_assets.app }}
+{{ with $script.js }}
+  <amp-script src="{{ absURL (printf "%s%s" "dist/" .) }}"></amp-script>
+{{ end }}
